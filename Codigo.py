@@ -4,7 +4,7 @@ import plotly.express as px
 
 #carregar base de vendas
 df_vendas = pd.read_csv("vendas.csv", sep=";")
-df_vendas["data"] = pd.to_datetime(df_vendas["data"], dayfirst=True)
+df_vendas["data"] = pd.to_datetime(df_vendas["data"], format="ISO8601")
 
 st.write("# Sistema de vendas")
 
